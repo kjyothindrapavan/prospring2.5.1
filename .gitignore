@@ -1,0 +1,4 @@
+/.metadata/
+*.metadata
+/spring2/target/
+*.classpath
