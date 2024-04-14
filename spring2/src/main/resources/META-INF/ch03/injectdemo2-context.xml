@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+        <bean id="name" class="java.lang.String">
+       		<constructor-arg>
+       			<value>John Smith</value>
+       		</constructor-arg>
+       </bean> 
+       
+       <bean id="injectSimpleParent" class="com.aspress.prospring2.spring2.ch03.beanfactory.InjectSimpleDemo">
+       		<property name="name">
+       			  <ref bean="name" /> 
+       		</property>
+       		<property name="age" value="2"/>
+       		<property name="height">
+       			<value>0.8</value>
+       		</property>
+       		<property name="isProgrammer">
+       			<value>false</value>
+       		</property>
+       		<property name="ageInSeconds">
+       			<value>63072000</value>
+       		</property>
+       </bean>
+       
+       
+</beans>
